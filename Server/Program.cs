@@ -60,7 +60,7 @@ app.MapPost("/login", async ([FromServices] BaseDeDatos baseDeDatos, [FromServic
     var sedeEncontrada = await baseDeDatos.Sedes.FirstOrDefaultAsync(x => x.Id == sede.Id);
     if (sedeEncontrada is null || !loginService.Verify(sede.Password, sedeEncontrada.Password))
     {
-        return Results.Unauthorized();
+        return Results.BadRequest("El usuario o la contraseña son incorrectos.");
     }
     var token = loginService.GenerateToken(sedeEncontrada.Id);
     return Results.Ok(new { token });
