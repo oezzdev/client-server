@@ -1,9 +1,9 @@
 const TOKEN_KEY = "access-token";
-const LOGIN_PAGE = "/login";
+const LOGIN_PAGE = "login";
 
 class HttpService {
     constructor() {
-        this.baseUrl = "https://localhost:7205";
+        this.baseUrl = "https://client-server-production-ee1e.up.railway.app";
     }
 
     async getAsync(uri) {
