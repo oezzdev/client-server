@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_wd49GMLevH
 createdAt: 2025-11-07T03:51:30.661897600
-updatedAt: 2025-11-09T17:41:13.888089100
+updatedAt: 2025-11-19T20:16:20.062461
 workspaceId: wk_Fb63W8kZcR
 folderId: fl_WCvChRdjU8
 authentication: {}
@@ -23,5 +23,5 @@ headers:
 method: POST
 name: Login
 sortPriority: 4000.0
-url: https://localhost:7205/login
+url: https://client-server-production-ee1e.up.railway.app/login
 urlParameters: []

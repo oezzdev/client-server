@@ -10,7 +10,7 @@ public class BaseDeDatos : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=servidor.db");
+        optionsBuilder.UseSqlite("Data Source=bellaVista.db");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
