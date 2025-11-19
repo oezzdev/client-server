@@ -56,7 +56,6 @@ app.UseCors("all");
 
 app.MapPost("/login", async ([FromServices] BaseDeDatos baseDeDatos, [FromServices] LoginService loginService, [FromBody] Sede sede) =>
 {
-    var hashedPassword = loginService.Hash(sede.Password);
     var sedeEncontrada = await baseDeDatos.Sedes.FirstOrDefaultAsync(x => x.Id == sede.Id);
     if (sedeEncontrada is null || !loginService.Verify(sede.Password, sedeEncontrada.Password))
     {

@@ -3,12 +3,16 @@ model: environment
 id: ev_vWp5V8df6S
 workspaceId: wk_Fb63W8kZcR
 createdAt: 2025-11-19T22:46:23.551335600
-updatedAt: 2025-11-19T22:46:23.551336400
+updatedAt: 2025-11-19T23:15:51.575139800
 name: Production
 public: true
 base: false
 parentModel: environment
 parentId: null
-variables: []
-color: var(--success)
+variables:
+- enabled: true
+  name: API_URL
+  value: https://client-server-production-ee1e.up.railway.app
+  id: SZw5eWa3qs
+color: var(--danger)
 sortPriority: 0.0
