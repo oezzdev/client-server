@@ -46,6 +46,7 @@ using (var scope = app.Services.CreateScope())
 {
     var baseDeDatos = scope.ServiceProvider.GetRequiredService<BaseDeDatos>();
     baseDeDatos.Database.EnsureCreated();
+    baseDeDatos.SeedData();
 }
 
 app.UseHttpsRedirection();
