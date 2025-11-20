@@ -3,7 +3,7 @@ model: environment
 id: ev_vWp5V8df6S
 workspaceId: wk_Fb63W8kZcR
 createdAt: 2025-11-19T22:46:23.551335600
-updatedAt: 2025-11-19T23:15:51.575139800
+updatedAt: 2025-11-20T05:04:29.066109300
 name: Production
 public: true
 base: false
@@ -13,6 +13,10 @@ variables:
 - enabled: true
   name: API_URL
   value: https://client-server-production-ee1e.up.railway.app
-  id: SZw5eWa3qs
+  id: W38ecaa66q
+- enabled: true
+  name: ACCESS_TOKEN
+  value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTRURFLU1BSU4iLCJqdGkiOiI2ODE4NjNiMi0zYmU0LTRkYWItOTkwNy00ZmMxMjA2MmYzZDUiLCJleHAiOjE3NjQwNDcwMzgsImlzcyI6IkJlbGxhVmlzdGFJc3N1ZXIiLCJhdWQiOiJCZWxsYVZpc3RhQXVkaWVuY2UifQ.MWfm3oMRjGE-2h-K62T3c_DcSmmlTOaul_x-s3O4ZSw
+  id: UXE9J3CJIm
 color: var(--danger)
 sortPriority: 0.0

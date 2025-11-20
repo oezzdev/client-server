@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using BellaVista.Models;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
@@ -6,12 +7,12 @@ namespace BellaVista;
 
 public class LoginService(string issuer, string audience, SecurityKey securityKey)
 {
-    public string GenerateToken(string id)
+    public string GenerateToken(Sede sede)
     {
         var claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Sub, id),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            new Claim(JwtRegisteredClaimNames.Sub, sede.Id),
+            new Claim("main", sede.IsMain.ToString())
         };
 
         var signingCredentials = new SigningCredentials(

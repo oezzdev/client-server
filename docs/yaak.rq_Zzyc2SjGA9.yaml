@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_Zzyc2SjGA9
 createdAt: 2025-11-05T19:01:34.366307900
-updatedAt: 2025-11-09T17:41:17.759503500
+updatedAt: 2025-11-20T05:22:08.965791600
 workspaceId: wk_Fb63W8kZcR
 folderId: fl_WCvChRdjU8
 authentication: {}
@@ -27,5 +27,5 @@ headers:
 method: PUT
 name: Create Evento
 sortPriority: 3000.0
-url: https://localhost:7205/eventos
+url: ${[ API_URL ]}/eventos
 urlParameters: []
