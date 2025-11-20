@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Scalar.AspNetCore;
 using System.Text;
 
 const string ISSUER = "BellaVistaIssuer";
@@ -15,7 +14,6 @@ var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(SECRET_KEY));
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi();
 builder.Services.AddDbContext<BaseDeDatos>();
 
 builder.Services.AddCors(options =>
@@ -46,9 +44,6 @@ builder.Services
 builder.Services.AddSingleton(new LoginService(ISSUER, AUDIENCE, key));
 
 var app = builder.Build();
-
-app.MapOpenApi();
-app.MapScalarApiReference();
 
 using (var scope = app.Services.CreateScope())
 {
